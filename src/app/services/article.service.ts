@@ -9,6 +9,7 @@ import { map, Observable } from 'rxjs';
 export class ArticleService {
   private http = inject(HttpClient);
   private apiUrl = 'http://localhost:3000/articles';
+
   public getArticles(): Observable<Article[]> {
     return this.http.get<Article[]>(`${this.apiUrl}`);
   }
