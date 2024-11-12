@@ -7,16 +7,17 @@ import { map, Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ArticleService {
-  http = inject(HttpClient);
+  private http = inject(HttpClient);
+  private apiUrl = 'http://localhost:3000/articles';
   public getArticles(): Observable<Article[]> {
-    return this.http.get<Article[]>(`http://localhost:3000/articles`);
+    return this.http.get<Article[]>(`${this.apiUrl}`);
   }
   public getPopularArticles(): Observable<Article[]> {
     return this.http
-      .get<Article[]>('http://api.exemple.com/articles')
+      .get<Article[]>(`${this.apiUrl}`)
       .pipe(map((data) => data.filter((article) => article.likeCount > 100)));
   }
   public getArticleById(id: number): Observable<Article> {
-    return this.http.get<Article>(`http://localhost:3000/articles/${id}`);
+    return this.http.get<Article>(`${this.apiUrl}/${id}`);
   }
 }

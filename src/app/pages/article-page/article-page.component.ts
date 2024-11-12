@@ -14,7 +14,6 @@ import { Observable } from 'rxjs';
 export class ArticlePageComponent {
   private route: ActivatedRoute = inject(ActivatedRoute);
   private articleService = inject(ArticleService);
-  articleId!: number;
   article?: Article;
 
   ngOnInit() {
