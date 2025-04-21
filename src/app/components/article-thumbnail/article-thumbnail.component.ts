@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Article } from '../../models/article.model';
+import { Article } from '../../models/article/article.model';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 

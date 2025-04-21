@@ -1,8 +1,8 @@
 import { Component, inject, Input, OnInit, Output } from '@angular/core';
-import { Article } from '../../models/article.model';
+import { Article } from '../../models/article/article.model';
 import { ArticleThumbnailComponent } from '../article-thumbnail/article-thumbnail.component';
 import { Router, RouterModule } from '@angular/router';
-import { ArticleService } from '../../services/article.service';
+import { ArticleService } from '../../services/article/article.service';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 

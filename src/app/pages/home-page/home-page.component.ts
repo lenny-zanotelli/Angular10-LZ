@@ -2,8 +2,8 @@ import { Component, inject, Input } from '@angular/core';
 import { ArticleListComponent } from '../../components/article-list/article-list.component';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
-import { Article } from '../../models/article.model';
-import { ArticleService } from '../../services/article.service';
+import { Article } from '../../models/article/article.model';
+import { ArticleService } from '../../services/article/article.service';
 import { Observable } from 'rxjs';
 
 @Component({
