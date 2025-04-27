@@ -1,13 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-<<<<<<< Updated upstream
 import { Article } from '../../models/article/article.model';
 import { ArticleService } from '../../services/article/article.service';
-import { Observable } from 'rxjs';
-=======
-import { Article } from '../../models/article.model';
-import { ArticleService } from '../../services/article.service';
->>>>>>> Stashed changes
 
 @Component({
   selector: 'app-article-page',
