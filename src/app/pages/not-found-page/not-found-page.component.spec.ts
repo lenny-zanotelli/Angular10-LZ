@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NotFoundPageComponent } from './not-found-page.component';
+import { RouterModule } from '@angular/router';
 
 describe('NotFoundPageComponent', () => {
   let component: NotFoundPageComponent;
@@ -8,10 +9,10 @@ describe('NotFoundPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NotFoundPageComponent]
+      imports: [NotFoundPageComponent, RouterModule.forRoot([])]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(NotFoundPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

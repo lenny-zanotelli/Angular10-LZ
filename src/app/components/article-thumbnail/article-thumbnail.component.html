@@ -1,3 +1,4 @@
+@if(article) {
 <div class="article-thumbnail" ngClass="{ 'popular-article': article.likeCount > 200 }">
   <div class="article-thumbnail__image-container">
     <img [src]="article.image" [alt]="article.title" class="article-thumbnail__image" />
@@ -19,3 +20,7 @@
     </p>
   </div>
 </div>
+} @else {
+<p> no article</p>
+}
+

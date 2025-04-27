@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ArticleListComponent } from '../../components/article-list/article-list.component';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
