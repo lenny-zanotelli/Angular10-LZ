@@ -3,23 +3,41 @@
     <span class="header-logo">Jane DOE</span>
     <nav class="header-nav">
       <a [routerLink]="['/']" routerLinkActive="router-link-active">Accueil</a>
-      <a [routerLink]="['articles']" routerLinkActive="router-link-active">Articles</a>
+      <a [routerLink]="['articles']" routerLinkActive="router-link-active"
+        >Articles</a
+      >
       <a routerLink="['ecole']">L'École</a>
       <a routerLink="contact" routerLinkActive="router-link-active">Contact</a>
-      @if(isAdmin()) {
-      <a [routerLink]="['profile']" routerLinkActive="router-link-active">Profile</a>
-      <a [routerLink]="['admin']" routerLinkActive="router-link-active">Dashboard</a>
-      <button type="button" class="header-button" (click)="logout()">Se déconnecter</button>
+      @if (isAdmin()) {
+        <a [routerLink]="['profile']" routerLinkActive="router-link-active"
+          >Profile</a
+        >
+        <a [routerLink]="['admin']" routerLinkActive="router-link-active"
+          >Dashboard</a
+        >
+        <button type="button" class="header-button" (click)="logout()">
+          Se déconnecter
+        </button>
       } @else if (isUser()) {
-      <a [routerLink]="['profile']" routerLinkActive="router-link-active">Profile</a>
-      <button type="button" (click)="logout()">Se déconnecter</button>
+        <a [routerLink]="['profile']" routerLinkActive="router-link-active"
+          >Profile</a
+        >
+        <button type="button" (click)="logout()">Se déconnecter</button>
       } @else {
-      <button class="header-button" (click)="navigateToSignUpPage()">M'inscrire</button>
-      <button type="button" class="header-button" (click)="navigateToLoginPage()">Se connecter</button>
+        <button class="header-button" (click)="navigateToSignUpPage()">
+          M'inscrire
+        </button>
+        <button
+          type="button"
+          class="header-button"
+          (click)="navigateToLoginPage()"
+        >
+          Se connecter
+        </button>
       }
     </nav>
   </div>
   <div class="header-title">
-    <h1>WILD BLOG</h1>
+    <h1>wild-blog</h1>
   </div>
 </header>

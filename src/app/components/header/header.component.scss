@@ -1,5 +1,4 @@
 .header {
-
   &-top {
     display: flex;
     justify-content: space-between;
@@ -24,7 +23,7 @@
       transition: color 0.3s ease;
 
       &:hover {
-        color: #F7146B;
+        color: #f7146b;
       }
     }
   }
@@ -40,7 +39,7 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #F7146B;
+      background-color: #f7146b;
     }
   }
 

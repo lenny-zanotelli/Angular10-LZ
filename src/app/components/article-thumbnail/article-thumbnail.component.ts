@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './article-thumbnail.component.scss',
 })
 export class ArticleThumbnailComponent {
-  @Input() article!: Article;
+  @Input() article?: Article;
   @Output() notifyLike = new EventEmitter<Article>();
 
   sendNotification() {

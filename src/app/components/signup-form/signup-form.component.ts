@@ -26,7 +26,7 @@ export class SignupFormComponent {
         password: ['', [Validators.required, this.securePasswordValidator()]],
         confirmPassword: [''],
       },
-      { validators: this.passwordMatchValidator() }
+      { validators: this.passwordMatchValidator() },
     ),
   });
 

@@ -14,12 +14,19 @@ export class HeaderComponent {
   private route: Router = inject(Router);
 
   isAdmin(): boolean {
-    return this.authService.getUserRoles()?.some((role: any) => role.authority === "ROLE_ADMIN") ?? false;
+    return (
+      this.authService
+        .getUserRoles()
+        ?.some((role: any) => role.authority === 'ROLE_ADMIN') ?? false
+    );
   }
 
   isUser(): boolean {
-    return this.authService.getUserRoles()?.some((role: any) => role.authority === "ROLE_USER") ?? false;
-
+    return (
+      this.authService
+        .getUserRoles()
+        ?.some((role: any) => role.authority === 'ROLE_USER') ?? false
+    );
   }
   logout(): void {
     this.authService.clearToken();

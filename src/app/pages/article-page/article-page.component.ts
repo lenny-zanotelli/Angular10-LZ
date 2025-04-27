@@ -2,7 +2,6 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Article } from '../../models/article/article.model';
 import { ArticleService } from '../../services/article/article.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-article-page',
