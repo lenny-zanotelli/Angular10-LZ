@@ -11,10 +11,13 @@ describe('ArticlePageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ArticlePageComponent, HttpClientTestingModule, RouterModule.forRoot([])],
-      providers: [ArticleService]
-    })
-      .compileComponents();
+      imports: [
+        ArticlePageComponent,
+        HttpClientTestingModule,
+        RouterModule.forRoot([]),
+      ],
+      providers: [ArticleService],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ArticlePageComponent);
     component = fixture.componentInstance;

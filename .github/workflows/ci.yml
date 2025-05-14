@@ -1,0 +1,31 @@
+name: CI - Lint // Format
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/Checkout@v4
+
+      - name: Setup Node.Js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint
+        run: npm run lint
+
+      - name: npm run format
+        run: npm run format
+
+      - name: Build application
+        run: npm run build

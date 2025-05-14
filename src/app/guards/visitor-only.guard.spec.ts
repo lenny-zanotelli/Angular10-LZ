@@ -4,8 +4,8 @@ import { CanActivateFn } from '@angular/router';
 import { visitorOnlyGuard } from './visitor-only.guard';
 
 describe('visitorOnlyGuard', () => {
-  const executeGuard: CanActivateFn = (...guardParameters) => 
-      TestBed.runInInjectionContext(() => visitorOnlyGuard(...guardParameters));
+  const executeGuard: CanActivateFn = (...guardParameters) =>
+    TestBed.runInInjectionContext(() => visitorOnlyGuard(...guardParameters));
 
   beforeEach(() => {
     TestBed.configureTestingModule({});

@@ -33,22 +33,22 @@ export const routes: Routes = [
   {
     path: 'signup',
     component: SignupPageComponent,
-    canActivate: [visitorOnlyGuard]
+    canActivate: [visitorOnlyGuard],
   },
   {
     path: 'login',
     component: LoginFormComponent,
-    canActivate: [visitorOnlyGuard]
+    canActivate: [visitorOnlyGuard],
   },
   {
     path: 'profile',
     component: ProfilePageComponent,
-    canActivate: [authGuard]
+    canActivate: [authGuard],
   },
   {
     path: 'admin',
     component: AdminPageComponent,
-    canActivate: [roleGuard('ROLE_ADMIN')]
+    canActivate: [roleGuard('ROLE_ADMIN')],
   },
   {
     path: '**',

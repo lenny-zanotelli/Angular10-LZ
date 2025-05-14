@@ -4,28 +4,32 @@ import { Observable, tap } from 'rxjs';
 import { jwtDecode } from '../../lib/jwt-decode';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   private apiUrl = 'http://localhost:8080';
-  private http = inject(HttpClient)
+  private http = inject(HttpClient);
 
   login(email: string, password: string): Observable<string> {
     return this.http
-      .post(`${this.apiUrl}/auth/login`, { email, password }, { responseType: "text" })
+      .post(
+        `${this.apiUrl}/auth/login`,
+        { email, password },
+        { responseType: 'text' },
+      )
       .pipe(
         tap((token) => {
           this.saveToken(token);
-        })
-      )
+        }),
+      );
   }
 
   saveToken(token: string): void {
-    localStorage.setItem('token', token)
+    localStorage.setItem('token', token);
   }
 
   getToken(): string | null {
-    return localStorage.getItem('token')
+    return localStorage.getItem('token');
   }
 
   clearToken(): void {
@@ -55,13 +59,12 @@ export class AuthService {
       const expiryDate = new Date(decodedToken.exp * 1000);
       if (expiryDate < new Date()) {
         this.clearToken();
-        return false
+        return false;
       }
       return true;
     } catch {
       this.clearToken();
       return false;
-
     }
   }
 
@@ -77,5 +80,4 @@ export class AuthService {
       return null;
     }
   }
-
 }

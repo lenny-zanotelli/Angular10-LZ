@@ -9,9 +9,8 @@ describe('NotFoundPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NotFoundPageComponent, RouterModule.forRoot([])]
-    })
-      .compileComponents();
+      imports: [NotFoundPageComponent, RouterModule.forRoot([])],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(NotFoundPageComponent);
     component = fixture.componentInstance;

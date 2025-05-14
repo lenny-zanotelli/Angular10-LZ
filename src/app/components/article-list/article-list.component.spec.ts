@@ -11,9 +11,8 @@ describe('ArticleListComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ArticleListComponent, HttpClientTestingModule],
-      providers: [ArticleService]
-    })
-      .compileComponents();
+      providers: [ArticleService],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ArticleListComponent);
     component = fixture.componentInstance;

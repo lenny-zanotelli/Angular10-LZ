@@ -9,24 +9,23 @@ import { AuthService } from '../../services/auth/auth.service';
   standalone: true,
   imports: [FormsModule],
   templateUrl: './login-form.component.html',
-  styleUrl: './login-form.component.scss'
+  styleUrl: './login-form.component.scss',
 })
 export class LoginFormComponent {
   user: User = {
     email: '',
     password: '',
-  }
+  };
 
   private authService = inject(AuthService);
-  private router: Router = inject(Router)
+  private router: Router = inject(Router);
 
   onSubmit(form: NgForm) {
     if (form.valid) {
       this.authService.login(this.user.email, this.user.password).subscribe({
         next: () => this.router.navigate(['/profile']),
-        error: () => alert("Email ou mot de passe incorrect")
-      })
+        error: () => alert('Email ou mot de passe incorrect'),
+      });
     }
   }
-
 }

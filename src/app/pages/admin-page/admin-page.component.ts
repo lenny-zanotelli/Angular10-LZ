@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './admin-page.component.html',
-  styleUrl: './admin-page.component.scss'
+  styleUrl: './admin-page.component.scss',
 })
-export class AdminPageComponent {
-
-}
+export class AdminPageComponent {}

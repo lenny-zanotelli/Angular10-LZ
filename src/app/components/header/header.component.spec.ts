@@ -10,9 +10,8 @@ describe('HeaderComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [HeaderComponent, RouterModule.forRoot([])],
-      providers: []
-    })
-      .compileComponents();
+      providers: [],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;

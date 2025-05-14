@@ -7,7 +7,11 @@ export const roleGuard: (expectedRole: string) => CanActivateFn =
     const authService = inject(AuthService);
     const router = inject(Router);
 
-    const isLoggedInAndHasProperRole: boolean | undefined = authService.isLoggedIn() && authService.getUserRoles()?.some((role: any) => role.authority === expectedRole);
+    const isLoggedInAndHasProperRole: boolean | undefined =
+      authService.isLoggedIn() &&
+      authService
+        .getUserRoles()
+        ?.some((role: any) => role.authority === expectedRole);
     if (isLoggedInAndHasProperRole) {
       return true;
     } else {

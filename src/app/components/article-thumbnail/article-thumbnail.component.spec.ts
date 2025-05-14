@@ -10,9 +10,8 @@ describe('ArticleThumbnailComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ArticleThumbnailComponent, RouterModule.forRoot([])],
-      providers: []
-    })
-      .compileComponents();
+      providers: [],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ArticleThumbnailComponent);
     component = fixture.componentInstance;
